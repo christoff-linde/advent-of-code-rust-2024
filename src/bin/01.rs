@@ -19,7 +19,26 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
-    None
+    let mut left = vec![];
+    let mut right = vec![];
+
+    for line in input.lines() {
+        let mut items = line.split_whitespace();
+        left.push(items.next().unwrap().parse::<usize>().unwrap());
+        right.push(items.next().unwrap().parse::<usize>().unwrap());
+    }
+    left.sort();
+    right.sort();
+
+    // ensure no element repeats using vec::dedup()
+    left.dedup();
+
+    let result: usize = left
+        .iter()
+        .map(|number| number * right.iter().filter(|num| &number == num).count())
+        .sum();
+
+    Some(result as u32)
 }
 
 #[cfg(test)]
