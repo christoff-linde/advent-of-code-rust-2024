@@ -30,9 +30,6 @@ pub fn part_two(input: &str) -> Option<u32> {
     left.sort();
     right.sort();
 
-    // ensure no element repeats using vec::dedup()
-    left.dedup();
-
     let result: usize = left
         .iter()
         .map(|number| number * right.iter().filter(|num| &number == num).count())
@@ -48,12 +45,12 @@ mod tests {
     #[test]
     fn test_part_one() {
         let result = part_one(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(result, Some(11));
     }
 
     #[test]
     fn test_part_two() {
         let result = part_two(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(result, Some(31));
     }
 }
