@@ -1,9 +1,10 @@
 <img src="./.assets/christmas_ferris.png" width="164">
 
-# 🎄 Advent of Code {year}
+# 🎄 Advent of Code 2024
+
+[![Continuous Integration](https://github.com/christoff-linde/advent-of-code-rust-2024/actions/workflows/ci.yml/badge.svg)](https://github.com/christoff-linde/advent-of-code-rust-2024/actions/workflows/ci.yml)
 
 [![Update readme ⭐️ progress](https://github.com/christoff-linde/advent-of-code-rust-2024/actions/workflows/readme-stars.yml/badge.svg)](https://github.com/christoff-linde/advent-of-code-rust-2024/actions/workflows/readme-stars.yml)
-[![Continuous Integration](https://github.com/christoff-linde/advent-of-code-rust-2024/actions/workflows/ci.yml/badge.svg)](https://github.com/christoff-linde/advent-of-code-rust-2024/actions/workflows/ci.yml)
 
 Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.rust-lang.org/).
 
